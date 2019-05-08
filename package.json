@@ -2,21 +2,26 @@
   "name": "deploy-demo",
   "version": "0.0.0",
   "license": "MIT",
+  "engines": {
+    "node": "v10.15.1",
+    "npm": "6.4.1"
+  },  
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh": "ng build --prod --base-href='https://soyidwahyud.github.io/Test/' && ngh"
+    "deploy:gh": "ng build --prod --base-href='https://soyidwahyud.github.io/Test/' && ngh",
+    "postinstall": "ng build --output-path heroku11-app  --aot --prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
-    "@angular/core": "^4.0.0",
+    "@angular/core": "^4.0.0",  
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
@@ -25,7 +30,10 @@
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.1",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "@angular/cli": "1.2.4",
+    "@angular/compiler-cli": "^4.0.0",
+    "typescript": "~2.3.3"
   },
   "devDependencies": {
     "@angular/cli": "1.2.4",
