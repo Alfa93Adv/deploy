@@ -13,7 +13,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh": "ng build --prod --base-href='https://soyidwahyud.github.io/Test/' && ngh",
+    "deploy:gh": "ng build --prod --base-href='https://hernandacandrap.github.io/Deployment_Angular/' && ngh",
     "heroku-postbuild": "ng build --prod"
   },
   "private": true,
